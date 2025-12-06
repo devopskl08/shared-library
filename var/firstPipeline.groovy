@@ -9,7 +9,7 @@ def call(Map pipelineParams) {
         label 'slave-1'
     }
      environment {
-        APPLICATION_NAME = ${pipelineParams.appName}
+        APPLICATION_NAME = ${"pipelineParams.appName"}
      }
     stages{
         stage('Addition'){
@@ -28,4 +28,5 @@ def call(Map pipelineParams) {
         }
      }
   }
+
 }
